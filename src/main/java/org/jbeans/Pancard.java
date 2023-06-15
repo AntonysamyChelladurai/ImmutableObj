@@ -28,7 +28,7 @@ final class Pancard
                 ", lname='" + lname + '\'' +
                 '}';
     }
-    @Override
+    @Override // if hashcode is not Override , even all rules implemented for immutable, hashcode will be different.
     public int hashCode() {
         return name == null ? 0 : name.hashCode();
     }
